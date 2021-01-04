@@ -9,6 +9,9 @@ class User < ApplicationRecord
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :username, length: { maximum: 40 }, format:
+    { without: /\W/, message: "должен содержать только латинские буквы, цифры, и знак _" }
 
   attr_accessor :password
 
