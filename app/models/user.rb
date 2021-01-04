@@ -19,6 +19,7 @@ class User < ApplicationRecord
 
   validates_confirmation_of :password
 
+  before_validation :change_case!
   before_save :encrypt_password
 
   def encrypt_password
@@ -65,5 +66,9 @@ class User < ApplicationRecord
 
     # Иначе, возвращаем nil
     nil
+  end
+
+  def change_case!
+    username.downcase!
   end
 end
