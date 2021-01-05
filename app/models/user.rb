@@ -1,23 +1,17 @@
 require 'openssl'
-
 class User < ApplicationRecord
-
   ITERATIONS = 20000
   DIGEST = OpenSSL::Digest::SHA256.new
-
   has_many :questions
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :username, length: { maximum: 40 }, format:
-    { without: /\W/, message: "должен содержать только латинские буквы, цифры, и знак _" }
+  validates :username, length: { maximum: 40 }, format: { with: /\w/ }
+  validates :password, presence: true, on: :create
+  validates_confirmation_of :password
 
   attr_accessor :password
-
-  validates :password, presence: true, on: :create
-
-  validates_confirmation_of :password
 
   before_validation :change_case!
   before_save :encrypt_password
