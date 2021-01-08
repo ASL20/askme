@@ -12,7 +12,11 @@
   </h2>
 
   <h2 class="title-small buffer-both">
-    <%= questions_quantity(@questions) %>
+    Ответил на: <%= questions_quantity(@questions)[0] %>
+  </h2>
+
+  <h2 class="title-small buffer-both">
+    Оставил без ответа: <%= questions_quantity(@questions)[1] %>
   </h2>
 
   <div class="user-ask-button container text-center">
