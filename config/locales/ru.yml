@@ -1,0 +1,6 @@
+ru:
+  questions_quantity:
+    questions:
+      question_1: "вопрос"
+      question_2_4: "вопроса"
+      question_5_10: "вопросов"

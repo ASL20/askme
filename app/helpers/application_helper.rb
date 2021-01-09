@@ -22,11 +22,11 @@ module ApplicationHelper
       remainder = quantity % 10
 
       if !remainder.between?(1, 4) || (quantity % 100).between?(11, 14)
-        result << "#{quantity} вопросов"
+        result << "#{quantity} #{t('questions_quantity.questions.question_5_10')}"
       elsif remainder.between?(2, 4)
-        result << "#{quantity} вопроса"
+        result << "#{quantity} #{t('questions_quantity.questions.question_2_4')}"
       else
-        result << "#{quantity} вопрос"
+        result << "#{quantity} #{t('questions_quantity.questions.question_1')}"
       end
     end
     result
