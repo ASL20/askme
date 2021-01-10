@@ -8,27 +8,23 @@ module ApplicationHelper
   end
 
   def questions_quantity(questions)
-    arr = [
-      questions_with_answers = questions.select(&:answer).size,
-      questions_without_answers = questions.reject(&:answer).size
+    quantity_of_questions = [
+      questions.select(&:answer).size,
+      questions.reject(&:answer).size
     ]
-    result = []
 
-    arr.each do |quantity|
+    quantity_of_questions.map do |quantity|
       if quantity == nil || !quantity.is_a?(Numeric)
         number = 0
       end
-
       remainder = quantity % 10
-
       if !remainder.between?(1, 4) || (quantity % 100).between?(11, 14)
-        result << "#{quantity} #{t('questions_quantity.questions.question_5_10')}"
+        "#{quantity} #{t('questions_quantity.many')}"
       elsif remainder.between?(2, 4)
-        result << "#{quantity} #{t('questions_quantity.questions.question_2_4')}"
+        "#{quantity} #{t('questions_quantity.few')}"
       else
-        result << "#{quantity} #{t('questions_quantity.questions.question_1')}"
+        "#{quantity} #{t('questions_quantity.one')}"
       end
     end
-    result
   end
 end
