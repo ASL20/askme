@@ -11,6 +11,7 @@ module ApplicationHelper
     quantity_of_questions = [
       questions.select(&:answer).size,
       questions.reject(&:answer).size
+    ]
 
     quantity_of_questions.map do |quantity|
       if quantity == nil || !quantity.is_a?(Numeric)
