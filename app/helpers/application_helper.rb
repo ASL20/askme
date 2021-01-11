@@ -19,11 +19,11 @@ module ApplicationHelper
       end
       remainder = quantity % 10
       if !remainder.between?(1, 4) || (quantity % 100).between?(11, 14)
-        "#{quantity} #{t('questions_quantity.many')}"
+        t(:questions, count: quantity)
       elsif remainder.between?(2, 4)
-        "#{quantity} #{t('questions_quantity.few')}"
+        t(:questions, count: quantity)
       else
-        "#{quantity} #{t('questions_quantity.one')}"
+        t(:questions, count: quantity)
       end
     end
   end

@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  questions_quantity:
-      one: "question"
-      few: "questions"
-      many: "questions"
+  questions:
+      zero: "no questions"
+      one: "%{count} question"
+      other: "%{count} questions"
