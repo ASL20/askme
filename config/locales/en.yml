@@ -31,6 +31,11 @@
 
 en:
   questions:
-      zero: "no questions"
-      one: "%{count} question"
-      other: "%{count} questions"
+    answered:
+      zero: "No answered questions"
+      one: "%{count} answered question"
+      other: "%{count} answered questions"
+    unanswered:
+      zero: "No unanswered questions"
+      one: "%{count} unanswered question"
+      other: "%{count} unanswered questions"

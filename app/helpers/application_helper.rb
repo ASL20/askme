@@ -7,10 +7,12 @@ module ApplicationHelper
     end
   end
 
-  def questions_quantity(questions)
-    [
-      t(:questions, count: questions.select(&:answer).size),
-      t(:questions, count: questions.reject(&:answer).size)
-    ]
+  def questions_quantity(questions, status)
+    case status
+    when :answered
+      t('questions.answered', count: questions.select(&:answer).size)
+    when :unanswered
+      t('questions.unanswered', count: questions.reject(&:answer).size)
+    end
   end
 end
