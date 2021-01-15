@@ -30,4 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  questions:
+    answered:
+      zero: "No answered questions"
+      one: "%{count} answered question"
+      other: "%{count} answered questions"
+    unanswered:
+      zero: "No unanswered questions"
+      one: "%{count} unanswered question"
+      other: "%{count} unanswered questions"
