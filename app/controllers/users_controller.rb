@@ -39,6 +39,10 @@ class UsersController < ApplicationController
     @questions = @user.questions.order(created_at: :desc)
 
     @new_question = @user.questions.build
+
+    @questions_count = @questions.count
+    @answers_count = @questions.select(&:answer).count
+    @unanswered_count = @questions.reject(&:answer).count
   end
 
   private
