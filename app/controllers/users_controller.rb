@@ -44,6 +44,11 @@ class UsersController < ApplicationController
     @unanswered_count = @questions.reject(&:answer).count
   end
 
+  def destroy
+    @user.destroy
+    redirect_to root_url, notice: 'Пользователь успешно удалён!'
+  end
+
   private
 
   def authorize_user
