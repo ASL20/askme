@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :username, length: { maximum: 40 }, format: { with: /\A\w+\z/ }
   validates :password, confirmation: true, presence: true, on: :create
+  validates :profile_color, format: { with: /#\p{Alnum}{6}/ }
 
   before_validation :change_case!
   before_save :encrypt_password
