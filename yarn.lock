@@ -828,6 +828,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@eastdesire/jscolor@^2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@eastdesire/jscolor/-/jscolor-2.4.5.tgz#df46f049fb2b86a0cb450401ed6f7e46cd96fc43"
+  integrity sha512-LDCEGN7qKKO3tq6yYtx6cbz/tQlr9LqKNSFaG2GIIn03y67ot3doucpDGoQjCwXG2xUB4pDXRuH2lobjjxhtJA==
+
 "@npmcli/move-file@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@npmcli/move-file/-/move-file-1.0.1.tgz#de103070dac0f48ce49cf6693c23af59c0f70464"
