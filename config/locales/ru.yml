@@ -1,4 +1,14 @@
 ru:
+  activerecord:
+    attributes:
+      user:
+        name: Ваше имя
+        username: Ваш юзернейм
+        email: Ваш email
+        password: Пароль
+        password_confirmation: Подтвердите пароль
+        avatar_url: URL вашей аватарки
+        profile_color: Цвет вашего профиля
   questions:
     zero: 'Нет вопросов'
     one: '%{count} вопрос'
