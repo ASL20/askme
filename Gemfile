@@ -7,6 +7,10 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 
 gem 'rails_12factor'
 
+gem 'dotenv-rails'
+
+gem 'recaptcha', require: 'recaptcha/rails'
+
 gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 4.0'
 gem 'jquery-rails'
