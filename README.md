@@ -28,9 +28,12 @@ yarn
 
 Локально в vim ~/.bash_profile
 
+```
 export RECAPTCHA_ASKME_PUBLIC_KEY="<публичный ключ>"
-
+```
+```
 export RECAPTCHA_ASKME_PRIVATE_KEY="<приватный ключ>"
+```
 
 На странице приложения в Heroku в разделе Settings → Reveal Config Vars.
 
