@@ -1,24 +1,49 @@
-# README
+# Веб-приложение "Хорошие вопросы"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Учебное приложение по аналогии с сайтом ask.fm
 
-Things you may want to cover:
+## Описание
+В приложении реализована возможность задавать вопросы существующим пользователям(как анонимно, так и публично), просмотра профилей других пользователей.
 
-* Ruby version
+Ruby version- 2.7.0
 
-* System dependencies
+Rails version - 6.0.3
 
-* Configuration
+## Запуск приложения локально
+1. Клонируете репозиторий с приложением
+2. В терминале переходите в папку с приложением и выполняете команды
 
-* Database creation
+```
+bundle && bundle exec rake db:migrate
+```
+```
+yarn
+```
 
-* Database initialization
+4. Зарегистрироваться на сайте reCAPTCHA и добавить URL приложения, где оно будет запускаться.
 
-* How to run the test suite
+Если использовать только локально, то сразу переход на 5 пункт
 
-* Services (job queues, cache servers, search engines, etc.)
+4.1 Прописать в переменных окружения — локально и на heroku.
 
-* Deployment instructions
+Локально в vim ~/.bash_profile
 
-* ...
+export RECAPTCHA_ASKME_PUBLIC_KEY="<публичный ключ>"
+
+export RECAPTCHA_ASKME_PRIVATE_KEY="<приватный ключ>"
+
+На странице приложения в Heroku в разделе Settings → Reveal Config Vars.
+
+5. Запуск приложения в локалхост осуществляется в терминале
+
+5.1 запуск сервера rails
+
+```
+bundle exec rails s
+```
+
+5.2 запуск во втором окне терминала сервера webpacker для сборки стилей, скриптов и т.д.
+
+```
+bin/webpack-dev-server
+```
